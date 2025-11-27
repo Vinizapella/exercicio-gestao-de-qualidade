@@ -1,11 +1,15 @@
 package org.example.service.falha;
 
 import org.example.model.Falha;
+import org.example.repository.FalhaRepositoryImp;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class FalhaServiceImpl implements FalhaService{
+
+    FalhaRepositoryImp falhaRepositoryImp = new FalhaRepositoryImp();
+
     @Override
     public Falha registrarNovaFalha(Falha falha) throws SQLException {
         return null;
@@ -13,6 +17,8 @@ public class FalhaServiceImpl implements FalhaService{
 
     @Override
     public List<Falha> buscarFalhasCriticasAbertas() throws SQLException {
+
+        List<Falha> listFalhas = falhaRepositoryImp.
         return List.of();
     }
 }
