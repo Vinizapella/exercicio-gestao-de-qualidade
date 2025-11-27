@@ -11,7 +11,16 @@ public class RelatorioParadaDTO {
         this.totalHorasParadas = totalHorasParadas;
     }
 
-    public Long getEquipamentoId() { return equipamentoId; }
-    public String getNomeEquipamento() { return nomeEquipamento; }
-    public double getTotalHorasParadas() { return totalHorasParadas; }
+    public Long getEquipamentoId() {
+        return equipamentoId;
+    }
+
+    public String getNomeEquipamento() {
+        return nomeEquipamento;
+    }
+
+    public double getTotalHorasParadas() {
+        return totalHorasParadas;
+    }
+
 }

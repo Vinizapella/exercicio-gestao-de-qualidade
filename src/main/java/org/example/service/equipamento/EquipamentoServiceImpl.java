@@ -12,9 +12,10 @@ public class EquipamentoServiceImpl implements EquipamentoService{
 
     @Override
     public Equipamento criarEquipamento(Equipamento equipamento) throws SQLException {
-        equipamento.setStatusOperacional("OPERACIONAL");
-        return repository.save(equipamento);
 
+        equipamento.setStatusOperacional("OPERACIONAL");
+
+        return repository.save(equipamento);
     }
 
     @Override
@@ -28,7 +29,6 @@ public class EquipamentoServiceImpl implements EquipamentoService{
         if (equipamento == null) {
             throw new RuntimeException("Equipamento não encontrado!");
         }
-
         return equipamento;
     }
 

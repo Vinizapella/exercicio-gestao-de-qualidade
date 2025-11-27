@@ -16,7 +16,16 @@ public class FalhaDetalhadaDTO {
         this.acoesCorretivas = acoesCorretivas;
     }
 
-    public Falha getFalha() { return falha; }
-    public Equipamento getEquipamento() { return equipamento; }
-    public List<String> getAcoesCorretivas() { return acoesCorretivas; }
+    public Falha getFalha() {
+        return falha;
+    }
+
+    public Equipamento getEquipamento() {
+        return equipamento;
+    }
+
+    public List<String> getAcoesCorretivas() {
+        return acoesCorretivas;
+    }
+
 }
