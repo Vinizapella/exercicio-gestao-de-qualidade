@@ -1,7 +1,6 @@
 package org.example.service.falha;
 
 import org.example.model.Falha;
-
 import java.sql.SQLException;
 import java.util.List;
 

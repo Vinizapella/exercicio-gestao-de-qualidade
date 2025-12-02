@@ -2,7 +2,6 @@ package org.example.service.equipamento;
 
 import org.example.model.Equipamento;
 import org.example.repository.EquipamentoRepositorio;
-
 import java.sql.SQLException;
 
 public class EquipamentoServiceImpl implements EquipamentoService{

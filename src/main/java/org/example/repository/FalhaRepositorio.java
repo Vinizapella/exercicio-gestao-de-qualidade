@@ -3,7 +3,6 @@ package org.example.repository;
 import org.example.database.Conexao;
 import org.example.dto.RelatorioParadaDTO;
 import org.example.model.Falha;
-
 import java.math.BigDecimal;
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -94,7 +93,7 @@ public class FalhaRepositorio {
         String query = """
                 SELECT  
                 id,
-                 equipamentoId,
+                equipamentoId,
                 dataHoraOcorrencia,
                 descricao,
                 criticidade,

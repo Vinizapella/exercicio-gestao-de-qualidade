@@ -3,7 +3,6 @@ package org.example.service.falha;
 import org.example.model.Falha;
 import org.example.repository.EquipamentoRepositorio;
 import org.example.repository.FalhaRepositorio;
-
 import java.sql.SQLException;
 import java.util.List;
 

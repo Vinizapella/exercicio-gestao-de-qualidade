@@ -3,7 +3,6 @@ package org.example.repository;
 import org.example.database.Conexao;
 import org.example.dto.EquipamentoContagemFalhasDTO;
 import org.example.model.Equipamento;
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ public class EquipamentoRepositorio {
     public Equipamento salvarEquipamento(Equipamento equipamento) throws SQLException {
         String query = """
                 INSERT INTO
-                 Equipamento
+                Equipamento
                 (nome,
                 numeroDeSerie,
                 areaSetor,
@@ -106,7 +105,8 @@ public class EquipamentoRepositorio {
     public List<Equipamento> buscarEquipamentosSemFalha(LocalDate dataDe, LocalDate dataAte) throws SQLException{
         List<Equipamento> equipamentos = new ArrayList<>();
         String query = """
-                SELECT   id,
+                SELECT   
+                id,
                 nome,
                 numeroDeSerie,
                 areaSetor,

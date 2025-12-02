@@ -1,7 +1,6 @@
 package org.example.service.equipamento;
 
 import org.example.model.Equipamento;
-
 import java.sql.SQLException;
 
 public interface EquipamentoService {
