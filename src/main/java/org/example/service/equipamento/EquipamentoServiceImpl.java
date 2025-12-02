@@ -1,35 +1,34 @@
 package org.example.service.equipamento;
 
 import org.example.model.Equipamento;
-import org.example.repository.EquipamentoRepository;
-import org.example.repository.EquipamentoRepositoryImp;
+import org.example.repository.EquipamentoRepositorio;
 
 import java.sql.SQLException;
 
 public class EquipamentoServiceImpl implements EquipamentoService{
 
-    EquipamentoRepository repository = new EquipamentoRepositoryImp();
+    EquipamentoRepositorio repositorio = new EquipamentoRepositorio();
 
     @Override
     public Equipamento criarEquipamento(Equipamento equipamento) throws SQLException {
-
         equipamento.setStatusOperacional("OPERACIONAL");
+        equipamento = repositorio.salvarEquipamento(equipamento);
 
-        return repository.save(equipamento);
+        if (equipamento.getId() == null){
+            throw new RuntimeException("Ocorreu um erro!");
+        }
+
+        return equipamento;
     }
 
     @Override
     public Equipamento buscarEquipamentoPorId(Long id) throws SQLException {
-        if (id == null) {
-            throw new RuntimeException("ID inválido!");
+        Equipamento equipamento = repositorio.buscarEquipamentoPorId(id);
+
+        if(equipamento == null){
+            throw  new RuntimeException("Equipamento não encontrado!");
         }
 
-        Equipamento equipamento = repository.findByID(id);
-
-        if (equipamento == null) {
-            throw new RuntimeException("Equipamento não encontrado!");
-        }
         return equipamento;
     }
-
 }
